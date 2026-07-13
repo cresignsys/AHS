@@ -1,0 +1,76 @@
+#!/bin/bash
+
+CONFIG="/opt/ahs/config/ahs.conf"
+
+[ -f "$CONFIG" ] && source "$CONFIG"
+
+while true
+do
+    clear
+
+    echo "========================================"
+    echo "      Abey Hosting Server"
+    echo "========================================"
+    echo "Version : ${AHS_VERSION:-1.0.0}"
+    echo
+
+    echo "1) Create Website"
+    echo "2) Delete Website"
+    echo "3) List Websites"
+    echo "4) Install SSL"
+    echo "5) Backup Website"
+    echo "6) Restore Website"
+    echo "7) Server Status"
+    echo "8) Exit"
+    echo
+
+    read -p "Select an option: " OPTION
+
+    case $OPTION in
+
+        1)
+            /opt/ahs/bin/create-site.sh
+            ;;
+
+        2)
+            echo "Coming Soon"
+            read
+            ;;
+
+        3)
+            echo "Coming Soon"
+            read
+            ;;
+
+        4)
+            echo "Coming Soon"
+            read
+            ;;
+
+        5)
+            echo "Coming Soon"
+            read
+            ;;
+
+        6)
+            echo "Coming Soon"
+            read
+            ;;
+
+        7)
+            /opt/ahs/bin/status.sh
+            read
+            ;;
+
+        8)
+            exit
+            ;;
+
+        *)
+            echo "Invalid Option"
+            sleep 1
+            ;;
+
+    esac
+
+done

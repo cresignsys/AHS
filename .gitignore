@@ -1,0 +1,26 @@
+# Logs
+logs/
+*.log
+
+# Cache
+cache/
+tmp/
+
+# Backups
+backups/
+
+# Runtime files
+*.pid
+*.tmp
+*.swp
+
+# Local site data
+sites/*.conf
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
